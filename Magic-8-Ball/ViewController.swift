@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         // imageView.image = UIImage(named: ballArray[randomBallNumber])
          newBallImage()
     }
+    
+    // 摇一摇
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        newBallImage()
+    }
 
     func newBallImage() -> Void {
         randomBallNumber = Int.random(in: 0...4)
